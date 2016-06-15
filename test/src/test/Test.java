@@ -39,11 +39,38 @@ public class Test {
         
         newCadena = nuevaCadena.indexOf("/");
         
-        System.out.printf("Valor de / es: " + newCadena);
-        
+        //System.out.printf("Valor de / es: " + newCadena);
+        String Palabras="";
+        String PalabrasDos="";
+        String listaPalabras;
+        String ListaPalabras[] = new String[newCadena];
+        String listaPalabrasDos;
+        String ListaPalabrasDos[] = new String[newCadena];
         for(int contador = 0; contador<=(nuevaCadena.indexOf("/") - 1); contador++){
             System.out.printf("\n" + contador + ": " + nuevaCadena.charAt(contador));
+            listaPalabras = String.valueOf(nuevaCadena.charAt(contador));
+            ListaPalabras [contador] = listaPalabras;
         }
+        
+        for(int contador = (nuevaCadena.indexOf("/")+1); contador<=(nuevaCadena.length() - 1); contador++){
+            System.out.printf("\n" + contador + ": " + nuevaCadena.charAt(contador));
+            listaPalabrasDos = String.valueOf(nuevaCadena.charAt(contador));
+            //System.out.printf("\tlistaPalabrasDos: " + listaPalabrasDos);
+            ListaPalabrasDos[contador-contador] = listaPalabrasDos;
+        }
+        
+        for(int i=0;i<=(ListaPalabras.length - 1); i++){
+            Palabras = Palabras + ListaPalabras[i];
+            //System.out.printf("\nListaPalabras: " + ListaPalabras[i]);
+        }
+        System.out.printf("\nPalabras: " + Palabras);
+        
+        for(int e=0; e<=(ListaPalabrasDos.length - 1); e++){
+            PalabrasDos = PalabrasDos + ListaPalabrasDos[e];
+        }
+        System.out.printf("\nPalabrasDos: " + PalabrasDos);
+        
+        System.out.printf("\nValores: " + Palabras + " a " + PalabrasDos);
         System.out.println();
         //Termina la parte del programa para manejar strings
         
